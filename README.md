@@ -85,6 +85,28 @@ http://127.0.0.1:8000/
 http://127.0.0.1:8000/docs
 ```
 
+### Работа с Google Spreadsheets
+
+Чтобы сформировать отчет о скорости сбора средств на благотворительные проекты, нужно сделать GET-запрос на эндпоинт /google.
+Отчет появится в Spreadsheets на Google Drive. Для работы этого эндпоинта необходимо дополнить .env-файл, созданный ранее следующими данными:
+
+```
+TYPE=service_account
+PROJECT_ID=***
+PRIVATE_KEY_ID=***
+PRIVATE_KEY=***
+CLIENT_EMAIL=***
+CLIENT_ID=***
+AUTH_URI=***
+TOKEN_URI=***
+AUTH_PROVIDER_X509_CERT_URL=***
+CLIENT_X509_CERT_URL=***
+EMAIL= ваш gmail
+```
+
+Все константы можно перенести в .env файл из json файла, который вы скачиваете при создании сервисного аккаунта в Google API.
+Если у вас нет нужного json файла, интсрукцию по его получению можно найти, например, здесь: https://stackoverflow.com/questions/46287267/how-can-i-get-the-file-service-account-json-for-google-translate-api
+
 
 
 
